@@ -72,9 +72,54 @@ users.forEach((user)  => {
 });
 
 
+//* utilizzando .map
+// const minorenni = users.map((user) => {
+//   if(user.age > 18) return user.age; 
+// });
+// console.log(user.age);
 
+// const over65 = users.map((user) =>{
+//   if(user.age <= 65) return user.age;
+// });
+// console.log(user.age);
 
+//* METODO 1 utilizzando .filter 
+// const minorenniEOver65 = users.filter((user) => {
+//   if(user.age < 18){
+//     return console.log(user.age)
+//   }
+//   if(user.age >= 65){
+//     return console.log(user.age);
+//   }
+  
+// });
 
+//* METODO 2 utilizzando .filter
+// const minorenni = users.filter((user) => {
+//   //valore booleano true
+//   if(user.age > 18){
+//     return true; //12, 16
+//   }
+//   // STESSO RISULTATO CON valore booleano false
+//   // if(user.age > 18){ //12, 16
+//   //   return false;
+//   // }
+  
+//   console.log(user.age);
+// });
+
+// const over65 = users.filter((user) => {
+//   // //valore booleano true
+//   if(user.age <= 65){
+//     return true;
+//   }
+//   // // STESSO RISULTATO CON valore booleano false
+//   // if(user.age <= 65){
+//   //   return false;
+//   // }
+  
+//   console.log(user.age);
+// });
 
 
 
