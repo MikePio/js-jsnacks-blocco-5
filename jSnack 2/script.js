@@ -56,32 +56,37 @@ const students = [
   }
 ];
 
+//* BONUS
+// ordinare in ordine alfabetico in base al cognome
+students.sort((a, b) => {
+  if (a.surname < b.surname) {
+    return -1;
+  }
+  if (a.surname > b.surname) {
+    return 1;
+  }
+  return 0;
+});
+
 students.forEach(student => {
   // Destrutturalizzazione
   const {name, surname, idNumber, gPA, photo} = student;
   // console.log(student);
   const output = document.getElementById('output');
   output.innerHTML += `
-    <section id="team" class="pb-5">
+  <section id="students" class="pb-5">
     <div class="container">
       <div class="row flex-column align-items-center">
-        <div class="">
-          <div class="image-flip" >
-            <div class="mainflip flip-0">
-                <div class="frontside">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <p><img class=" img-fluid rounded-2" src="img/${photo}" alt="card image"></p>
-                      <h4 class="card-title">${name} ${surname}</h4>
-                      <p class="card-text">${name}-${surname} ${idNumber} ${gPA}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="card">
+          <div class="card-body text-center p-2 py-3">
+            <p><img class=" img-fluid rounded-2" src="img/${photo}" alt="card image"></p>
+            <h4 class="card-title pt-2">${name} ${surname}</h4>
+            <p class="card-text">${name}-${surname} ${idNumber} ${gPA}</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
   `
 });
 
