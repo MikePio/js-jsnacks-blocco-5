@@ -42,14 +42,33 @@ const users = [
 users.forEach((user)  => {
   //stampo ogni user
   // console.log(user);
+
   //stampo ogni nome ed età di ogni user
   // console.log(user.name, user.age);
-  if(user.age < 18 || user.age >= 65){
-    //stampo i minorenni e gli over 65
-    console.log(user.name, user.age);
-
-  }
   
+  // stampo i minorenni e gli over 65
+  // if(user.age < 18 || user.age >= 65){
+  //   console.log(user.name, user.age);
+  // }
+
+
+  if(user.age < 18){
+      const output = document.getElementById('output');
+      output.innerHTML += `
+      <ul>
+        <li>${user.name} con ${user.age} anni</li>
+      </ul>
+      `
+      
+    }
+    if(user.age >= 65){
+      const output2 = document.getElementById('output2');
+      output2.innerHTML += `
+      <ul>
+        <li>${user.name} con ${user.age} anni</li>
+      </ul>
+      `
+    }
 });
 
 
