@@ -16,49 +16,72 @@ const students = [
     name: 'Mario',
     surname: 'Rossi',
     idNumber: 12345,
-    gPA: 7.8
+    gPA: 7.8,
+    photo: 'wayne-barnett-founder-ceo.jpg'
   },
   {
-    name: 'Michele',
-    surname: 'Pilla',
+    name: 'Luca',
+    surname: 'Bianchi',
     idNumber: 54321,
-    gPA: 9.5
+    gPA: 9.5,
+    photo: 'walter-gordon-office-manager.jpg'
   },
   {
-    name: 'Francesco',
+    name: 'Francesca',
     surname: 'Bianchi',
     idNumber: 89578,
-    gPA: 3.5
+    gPA: 3.5,
+    photo: 'angela-lopez-social-media-manager.jpg'
   },
   {
     name: 'Maria',
     surname: 'Verdi',
     idNumber: 25987,
-    gPA: 6
+    gPA: 6,
+    photo: 'angela-caroll-chief-editor.jpg'
   },
   {
     name: 'Luisa',
     surname: 'Rossi',
     idNumber: 35687,
-    gPA: 8
+    gPA: 8,
+    photo: 'barbara-ramos-graphic-designer.jpg'
   },
   {
     name: 'Gianni',
     surname: 'Gialli',
     idNumber: 95863,
-    gPA: 5.5
+    gPA: 5.5,
+    photo: 'scott-estrada-developer.jpg'
   }
 ];
 
 students.forEach(student => {
   // Destrutturalizzazione
-  const {name, surname, idNumber, gPA} = student;
+  const {name, surname, idNumber, gPA, photo} = student;
   // console.log(student);
   const output = document.getElementById('output');
   output.innerHTML += `
-  <ul>
-    <li>${name}-${surname} ${idNumber} ${gPA}</li>
-  </ul>
+    <section id="team" class="pb-5">
+    <div class="container">
+      <div class="row flex-column align-items-center">
+        <div class="">
+          <div class="image-flip" >
+            <div class="mainflip flip-0">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid rounded-2" src="img/${photo}" alt="card image"></p>
+                      <h4 class="card-title">${name} ${surname}</h4>
+                      <p class="card-text">${name}-${surname} ${idNumber} ${gPA}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   `
 });
 

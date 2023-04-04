@@ -1,0 +1,47 @@
+.card-body img{
+  transition: all 0.5s;
+}
+
+.card-body img:hover{
+  transform: scale(1.09);
+}
+
+body{
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+  /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
