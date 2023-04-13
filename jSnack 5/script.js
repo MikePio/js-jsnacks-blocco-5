@@ -6,11 +6,26 @@ Stampare in console la bici con peso minore utilizzando destructuring e template
 */
 
 const biciclette = [
-    {nome: "Bici A", peso: 11},
-    {nome: "Bici B", peso: 9},
-    {nome: "Bici C", peso: 7},
-    {nome: "Bici D", peso: 10},
-    {nome: "Bici E", peso: 12},
+    {
+        nome: "Bici A",
+        peso: 11
+    },
+    {
+        nome: "Bici B",
+        peso: 9
+    },
+    {
+        nome: "Bici C",
+        peso: 7
+    },
+    {
+        nome: "Bici D",
+        peso: 10
+    },
+    {
+        nome: "Bici E",
+        peso: 12
+    }
 ];
 
 //*forEach 

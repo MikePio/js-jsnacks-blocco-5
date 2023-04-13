@@ -10,6 +10,40 @@ BONUS
 Stampare in pagina oltre che in console!
 */
 
+const squadre = [
+    { 
+        nome: "Squadra A", 
+        puntiFatti: 0,
+        falliSubiti: 0 
+    },
+    { 
+        nome: "Squadra B", 
+        puntiFatti: 0,
+        falliSubiti: 0 
+    },
+    { 
+        nome: "Squadra C", 
+        puntiFatti: 0,
+        falliSubiti: 0 
+    },
+    { 
+        nome: "Squadra D", 
+        puntiFatti: 0,
+        falliSubiti: 0 
+    }
+];
+    
+//numeri casuali per le proprietà punti fatti e falli subiti
+squadre.forEach(squadra => {
+    squadra.puntiFatti = Math.floor(Math.random() * 100);
+    squadra.falliSubiti = Math.floor(Math.random() * 50);
+});
+
+//map per creare un nuovo array con nomi e falli subiti
+const squadreFalli = squadre.map(({ nome, falliSubiti }) => ({ nome, falliSubiti }));
+
+console.log("Squadre di calcio:", squadre);
+console.log("Squadre con nomi e falli subiti:", squadreFalli);
 
 
 
